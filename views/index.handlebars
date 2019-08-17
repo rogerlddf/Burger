@@ -1,0 +1,69 @@
+<div class="container">
+
+  <div class="jumbotron">
+    <h1>Select and Eat Your Burger </h1>
+    {{!-- <p>Burger Orders for Pickup.</p> --}}
+    <br>
+    
+    
+        <form class="brg-form">
+          <div class="input-group">
+            <div class="form-group">
+              {{!-- <label for="newburger"> <h2>Select a Burger</h2></label> --}}
+              <input type="text" class="form-control" id="newburger" name="burger" placeholder="Order Your burger">
+                <button type="submit" class="btn btn-warning btn-lg " id="addburger">Get It</button>
+            </div>
+          </div>
+          
+        </form>
+
+        <div class="row justify-content-around">
+    <div class="col-sm-12 col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading eat-brg " ><strong>Eat Da Burger</strong>
+        </div>
+        <div class="panel-body">
+
+          <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+
+            <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+            <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+              data-newDevoured="{{devour}}"><i class="fas fa-utensils"></i></span></button>
+            <hr>
+            {{/unless}}
+            {{/each}}
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 ">
+      <div class="panel panel-default">
+        <div class="panel-heading ate-brg"  ><strong>Burgers Consumed</strong>
+        </div>
+        <div class="panel-body">
+          <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
+            <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
+              data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+            <hr>
+            {{/if}}
+            {{/each}}
+          </ul>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  
+  <!--endrow -->
+</div>
+<!--endcontainer -->

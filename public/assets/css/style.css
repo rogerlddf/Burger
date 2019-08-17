@@ -1,0 +1,68 @@
+body{
+  font-family: 'Poppins'!important;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Poppins'!important;
+}
+
+.jumbotron {
+  background-image: url("../img/brg-bg.jpg");
+  background-repeat: repeat-x;
+  background-position: 100% 50%;
+  background-color: #ebeaaf;
+  background-size: 48%;
+  color: #0e0d0d;
+  margin-top: 3%;
+}
+
+.jumbotron h1{
+  background-color: #c12e2e;
+  padding: 2% 1%;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  font-size: 4em;
+}
+
+.brg-form button{
+  display: block;
+  width: 28%;
+  float: left;
+  margin-left: 2%;
+  font-weight: 900;
+}
+
+.brg-form .input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 70%;
+    margin-bottom: 0;
+    font-weight: 900;
+}
+
+.form-group {
+   width: 100%;
+   display: block;
+}
+
+.eat-brg {
+  background-color: #c12e2e!important;
+  color: white!important;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.panel-body ul{
+  padding-left: 0px;
+}
+
+
+.ate-brg {
+  background-color: #000000!important;
+  color: white!important;
+  text-align: center;
+  font-size: 1.3em;
+}
+
